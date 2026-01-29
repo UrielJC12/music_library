@@ -1,10 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react';
+import ReactDom from 'react-dom/client';
+import { Card } from './Card';
 import './index.css'
-import App from './App.tsx'
+import rhcp from "./assets/rhcpbtw.jpg"
+import lucki from "./assets/lucki.jpg"
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+const root = ReactDom.createRoot(document.getElementById('root')!)
+root.render(
+<div className='App'>
+  <header className='header'>
+    <h1 className='app_name'>SYNC</h1>
+    <h2>Crea tu mood<br/><span>Crea tu playlist!</span></h2>
+  </header>
+<div className='cards'>
+  <Card imgName={rhcp} playlistName="My RHCP playlist" createdBy="Uriel Javier C" />
+  <Card imgName={lucki} playlistName="Days B4 III" createdBy="Uriel Javier C" />
+</div>
+</div>
+
 )
