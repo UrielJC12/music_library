@@ -41,6 +41,7 @@ body{
 }
 
 .card{
+    width: 300px;
     display: flex;
     align-items: center;
     font-size: 1rem;
@@ -55,12 +56,14 @@ body{
 }
 
 .card_img img{
-    max-width: 100px;
+    width: 120px;
+    height: 120px;
     margin: 1rem;
     border-radius: 5px;
+    object-fit: cover;
 }
 
-.playlist_info{
+.song_info{
     display: flex;
     justify-content: center;
     flex-direction: column;
